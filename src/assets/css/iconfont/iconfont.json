@@ -1,0 +1,86 @@
+{
+  "id": "1940155",
+  "name": "photon",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "17064685",
+      "name": "下 拉",
+      "font_class": "-dropdown-arrow",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "17064209",
+      "name": "编组 2",
+      "font_class": "-quote-default-type",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "17064199",
+      "name": "编组 3",
+      "font_class": "-quote-custom-type",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "16978235",
+      "name": "编组 4备份 4",
+      "font_class": "-task-todo",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "16971361",
+      "name": "人员禁用",
+      "font_class": "-user-forbidden",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "16963754",
+      "name": "音量",
+      "font_class": "-volume-loud",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "16963746",
+      "name": "音量关",
+      "font_class": "-volume-mute",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "11766709",
+      "name": "未绑定",
+      "font_class": "-unbound",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "13282951",
+      "name": "开发",
+      "font_class": "-developing",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    },
+    {
+      "icon_id": "6691134",
+      "name": "权限",
+      "font_class": "-permission",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "13722450",
+      "name": "-list Empty",
+      "font_class": "-list-empty",
+      "unicode": "e68f",
+      "unicode_decimal": 59023
+    }
+  ]
+}

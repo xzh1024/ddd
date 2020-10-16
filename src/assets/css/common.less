@@ -1,0 +1,345 @@
+// 1440 * 732
+// 公共样式库
+@black: #000;
+@placeholder: #CECECE;
+@radius: 4px;
+@boxShadow: 0 0 40px 0 rgba(0, 0, 0, .4);
+
+// Primary Color
+@baseColor: #00A8FF; // rgb(0, 168, 255)
+@success: #66BB6A;
+@info: #9E9E9E;
+@warn: #FFA726;
+@error: #EF5351;
+
+// Secondary Color
+@blue: #5C6BC0;
+@green: #26A69A;
+@purple: #7E58C2;
+@grayDeep: #78909C;
+@orange: #FFA726;
+@redLight: #E57373;
+@orangeDeep: #FF7043;
+@brown: #8D6E63;
+@abnormal: #EF5B58;
+
+// Font Size & Color
+@font18: 18px;
+@font16: 16px;
+@font14: 14px;
+@font12: 12px;
+@white: rgba(255, 255, 255, 1); // #FFFFFF
+@text: rgba(255, 255, 255, 0.87); // #E3E4E4
+@textLight: rgba(255, 255, 255, 0.6); // #AAACAD
+@textLighter: rgba(255, 255, 255, 0.38); // #7C7F80
+
+// Background Color
+@backGround: #2C3133;
+@backGroundLight: #202325;
+@backGroundLighter: #292C2E;
+@backGroundLightExtra: #282B2D;
+@popupBackGround: #2E3335;
+@borderColor: #3B3F41;
+@border: 1px solid @borderColor;
+@borderColorLight: #ACB0BD;
+@borderColorDeep: #1D2021;
+@borderColorHover: @baseColor;
+@backGroundHover: #373F43;
+
+// Hover Active Disabled
+@scrollHover: #4E7E96;
+@baseHover: #0990D6;
+@baseActive: #049CEA;
+@baseDisabled: rgba(32, 35, 37, 0.3);
+
+html, body {
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 14px;
+    color: @text;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+textarea {
+    font-family: inherit;
+    font-size: 14px !important;
+}
+
+a:hover, button:hover, select:hover {
+    cursor: pointer;
+}
+
+/deep/ .el-dialog__wrapper {
+    @media (max-height: 732px) {
+        /deep/ .el-dialog {
+            max-height: 608px;
+            margin-top: 10vh !important;
+            .el-dialog__body {
+                max-height: 550px;
+                .dialog-has-footer {
+                    height: 474px;
+                }
+                .dialog-no-footer, .el-tabs__content {
+                    height: 550px;
+                }
+                .task-add-layout {
+                    padding: 0;
+                }
+            }
+        }
+    }
+    @media (min-height: 733px) and (max-height: 832px) {
+        /deep/ .el-dialog {
+            max-height: 658px;
+            margin-top: 10vh !important;
+            .el-dialog__body {
+                max-height: 600px;
+                .dialog-has-footer {
+                    height: 524px;
+                }
+                .dialog-no-footer, .el-tabs__content {
+                    height: 600px;
+                }
+                .task-add-layout {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+/deep/ .el-table {
+    .el-table__header {
+        .caret-wrapper {
+            height: 20px;
+            .sort-caret.ascending {
+                top: -2px;
+            }
+            .sort-caret.descending {
+                bottom: 0;
+            }
+        }
+    }
+    .el-table__body {
+        td {
+            .cell {
+                width: 100% !important;
+            }
+        }
+        .el-table__row {
+            &.el-table__row--level-0 {
+                color: @text;
+                * {
+                    color: @text;
+                }
+            }
+            &.el-table__row--level-1 {
+                color: @textLight;
+                * {
+                    color: @textLight;
+                }
+            }
+            &.el-table__row--level-2 {
+                color: @textLighter;
+                * {
+                    color: @textLighter;
+                }
+            }
+        }
+    }
+    th {
+        padding: 17px 2px 17px 20px !important;
+        height: 58px!important;
+        overflow: hidden;
+    }
+    td {
+        padding: 13px 2px 13px 20px !important;
+        height: 50px;
+    }
+    &:hover {
+        .scroll-track-bar {
+            opacity: 1;
+        }
+    }
+}
+
+/deep/ .el-input, /deep/ .el-textarea {
+    &.is-disabled {
+        .el-input__inner, .el-textarea__inner {
+            background: @baseDisabled;
+            &:hover {
+                border-color: @borderColorDeep;
+            }
+        }
+    }
+}
+
+/deep/ .el-input__inner, /deep/ .el-textarea__inner {
+    &:hover {
+        border-color: @borderColorHover;
+    }
+    // daterange
+    &.is-disabled {
+        background: @baseDisabled;
+        .el-range-input {
+            background: none;
+        }
+        &:hover {
+            border-color: @borderColorDeep;
+        }
+    }
+}
+
+/deep/ .el-select-dropdown__item.hover, .el-select-dropdown__item:hover {
+    background: @backGroundHover;
+}
+
+/deep/ .el-range-input {
+    background: @backGround;
+}
+
+/deep/ .el-scrollbar__wrap {
+    overflow-x: hidden;
+}
+
+/deep/ .el-scrollbar__bar.is-horizontal {
+    opacity: 0;
+}
+
+/deep/ .el-scrollbar__thumb {
+    background: rgba(170, 172, 173, .5);
+    border-radius: @radius;
+}
+
+/deep/ .el-scrollbar__thumb:hover {
+    background-color: @scrollHover;
+}
+
+// 重写 chrome 滚动条样式
+.com-scrollbar {
+    ::-webkit-scrollbar-track-piece {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+    }
+    
+    /* 整个滚动条 */
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    
+    /* 滚动条竖向滑块 */
+    ::-webkit-scrollbar-thumb:vertical {
+        width: 6px;
+        height: 6px;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, .2);
+        border-radius: 3px;
+    }
+    
+    /* 滚动条竖向滑块hover */
+    ::-webkit-scrollbar-thumb:vertical:hover {
+        background-color: rgba(0, 0, 0, .4);
+    }
+    
+    /* 滚动条横向滑块 */
+    ::-webkit-scrollbar-thumb:horizontal {
+        width: 6px;
+        height: 6px;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, .2);
+        border-radius: 3px;
+    }
+    
+    /* 滚动条横向滑块hover */
+    ::-webkit-scrollbar-thumb:horizontal:hover {
+        background-color: rgba(0, 0, 0, .4);
+    }
+    
+    /* 同时有垂直和水平滚动条时交汇的部分 */
+    ::-webkit-scrollbar-corner {
+        display: block; /* 修复交汇时出现的白块 */
+    }
+}
+
+// Scroll bar
+.scroll-track-bar {
+    position: absolute;
+    border-radius: @radius;
+    -webkit-transition: opacity 120ms ease-out;
+    -moz-transition: opacity 120ms ease-out;
+    -ms-transition: opacity 120ms ease-out;
+    -o-transition: opacity 120ms ease-out;
+    transition: opacity 120ms ease-out;
+    opacity: 0;
+    z-index: 1000;
+    .thumb-bar {
+        position: relative;
+        background: rgba(170, 172, 173, .5);
+        border-radius: @radius;
+        -webkit-transition: background-color 0.3s;
+        -moz-transition: background-color 0.3s;
+        -ms-transition: background-color 0.3s;
+        -o-transition: background-color 0.3s;
+        transition: background-color 0.3s;
+        &:hover {
+            background: @scrollHover;
+        }
+    }
+}
+
+// Vertical
+/deep/ .scroll-fix-vertical {
+    top: 2px;
+    right: 1px;
+    width: 6px;
+    height: calc(100% - 4px);
+    .scroll-fix-vertical-piece {
+        width: 100%;
+        height: 0;
+        max-height: 100% !important;
+    }
+}
+
+// Horizontal
+/deep/ .scroll-fix-horizontal {
+    bottom: 1px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: 6px;
+    .scroll-fix-horizontal-piece {
+        width: 0;
+        height: 100%;
+        max-width: 100% !important;
+    }
+}
+
+.el-select-dropdown.is-multiple .el-select-dropdown__item.cp-options.selected::after {
+    right: 40px !important;
+}
+
+/deep/ .el-textarea {
+    .el-input__count {
+        height: 20px;
+        line-height: 20px;
+    }
+}
